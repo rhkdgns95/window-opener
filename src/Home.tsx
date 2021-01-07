@@ -4,8 +4,11 @@ import Parent from "./Parent";
 export default () => {
   const [message, setMessage] = useState<string>("");
   const onChangeMessage = (e: React.ChangeEvent<HTMLInputElement>) => {
+    console.log("Home ChangeEvent!");
+    console.log("value: ", e.target.value);
     setMessage(e.target.value);
   };
+
   return (
     <div
       style={{
